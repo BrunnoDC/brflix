@@ -1,4 +1,61 @@
-<script setup></script>
+<script>
+  import axios from "axios ";
+import CardComp from "../components/CardComp.vue";
+export default {
+  components: { CardComp },
+  data() {
+    return {
+      generos: [],
+      filmesPorGenero: [],
+      movies: [
+        {
+          id: 1,
+        },
+        {
+          id: 2,
+        },
+        {
+          id: 3,
+        },
+        {
+          id: 4,
+        },
+        {
+          id: 5,
+        },
+        {
+          id: 6,
+        },
+      ],
+    };
+  },
+  async created() {
+    const { data } = await axios.get(
+      "https://api.themoviedb.org/3/genre/movie/list?api_key=cdd74c9f441352e6a6aee5e2cc6532e6&language=pt-br"
+    );
+    for (const genero of data.genres) {
+      const { data } = await axios.get(
+        `https://api.themoviedb.org/3/discover/movie?api_key=cdd74c9f441352e6a6aee5e2cc6532e6&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genero.id}&with_watch_monetization_types=flatrate`
+      );
+      this.filmesPorGenero.push({
+        id: genero.id,
+        name: genero.name,
+        movies: data.results,
+      });
+    }
+    console.log(this.filmesPorGenero);
+    this.generos = data.genres;
+  },
+  methods: {
+    async getMoviesByGenre(genre) {
+      const { data } = await axios.get(
+        `https://api.themoviedb.org/3/discover/movie?api_key=cdd74c9f441352e6a6aee5e2cc6532e6&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genre}&with_watch_monetization_types=flatrate`
+      );
+      return data.results;
+    },
+  },
+};
+</script>
 
 <template>
     <div class="main">
