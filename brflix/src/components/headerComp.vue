@@ -44,7 +44,7 @@ a {
 }
 
 .fontlogo {
-  color: white;
+  color: #1db954;
   font-size: 2.4em;
   font-family: "Arial Black", sans-serif, Arial, Helvetica;
   font-weight: bolder;
@@ -61,7 +61,7 @@ header span {
   outline: none;
 }
 header {
-  background-color: #1db954;
+  background-color: #212121;
   box-shadow: 0 0 40px 0 #1db954;
   height: 25%;
   font-size: 1.5rem;

@@ -69,8 +69,8 @@ export default {
       </div>
     </div>
   </div>
-  <div class="">
-    <div v-for="genero of generos" :key="genero.id">
+  <div class="cardi">
+    <div class="carde" v-for="genero of generos" :key="genero.id">
       <h1 class="flex justify-center text-white text-4xl pb-7">
         {{ genero.name }}
       </h1>
@@ -88,7 +88,6 @@ export default {
 </template>
 <style>
 .bemvindo {
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 35%;
@@ -112,4 +111,26 @@ export default {
 .btnenter a {
   color: black;
 }
+.cardi{
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  justify-content:center ;
+  margin-left: 4%;
+  flex-wrap: wrap;
+}
+
+.rounded-t-lg{
+  font-size: 15px;
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: #1db954;
+  width: 50%;
+  height: 50%;
+  padding: 15px;
+}
+
+
+
 </style>
