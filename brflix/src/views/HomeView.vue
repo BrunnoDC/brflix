@@ -1,24 +1,28 @@
 <script setup></script>
 
 <template>
-
+  <div class="bemvindo">
+    <span>Os melhores filmes estão aqui</span>
+    <router-link to="/list">
+      <button class="btnenter">Acesse a lista</button>
+    </router-link>
+  </div>
 </template>
 <style>
-
-body{
+body {
   background-color: #212121;
 }
-  
+
 .bemvindo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
   color: white;
   font-size: 1.8rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-
+  margin-top: 27%;
+  padding: 20px;
 }
 
 .bemvindo button {

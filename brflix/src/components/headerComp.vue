@@ -4,19 +4,17 @@
     <span class="pessoasproc">Os melhores filmes</span>
     <div class="logo">
       <a href="">
-        <span class="fontlogo">braflix</span>
+        <span class="fontlogo">B R A F L I X</span>
       </a>
     </div>
     <div class="submit-line">
-      <input type="text" placeholder="Pesquisar Filmes" />
-      <button class="submit-lente" type="submit">
-        <i class="fa fa-search"></i>
-      </button>
+      <img src="../img/6063509.png" alt="">
     </div>
   </header>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -37,6 +35,9 @@ a {
   position: relative;
   width: 200px;
 }
+.submit-line img {
+  width: 20%;
+}
 
 .submit-line input {
   padding: 3px;
@@ -45,9 +46,9 @@ a {
 
 .fontlogo {
   color: #1db954;
-  font-size: 2.4em;
-  font-family: "Arial Black", sans-serif, Arial, Helvetica;
-  font-weight: bolder;
+  font-size: 2em;
+  font-family: "Poppins";
+  font-weight: 600;
 }
 header span {
   padding: 0 480px;
@@ -62,7 +63,7 @@ header span {
 }
 header {
   background-color: #212121;
-  box-shadow: 0 0 40px 0 #1db954;
+  box-shadow: 0 0 40px 0 #1db95460;
   height: 25%;
   font-size: 1.5rem;
   color: white;

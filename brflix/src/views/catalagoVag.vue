@@ -59,16 +59,9 @@ export default {
 
 <template>
   <div class="main">
-    <div class="lista">
-      <h2 class="txtprin">Mais Procurados</h2>
-      <hr />
-      <div class="categorias">
-        <span>ação</span>
-        <span>Comedia</span>
-        <span>Drama</span>
-      </div>
-    </div>
+    <h2 class="txtprin">Categorias</h2>
   </div>
+  <hr>
   <div class="cardi">
     <div class="carde" v-for="genero of generos" :key="genero.id">
       <h1 class="flex justify-center text-white text-4xl pb-7">
@@ -90,12 +83,12 @@ export default {
 .bemvindo {
   flex-direction: column;
   align-items: center;
-  margin-top: 35%;
   color: white;
   font-size: 1.8rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.288);
+  box-shadow: 0 0 10px #1db95488;
 }
 
 .bemvindo button {
@@ -111,26 +104,47 @@ export default {
 .btnenter a {
   color: black;
 }
-.cardi{
+.cardi {
   color: white;
   display: flex;
   align-items: center;
   font-size: 30px;
-  justify-content:center ;
+  justify-content: center;
   margin-left: 4%;
   flex-wrap: wrap;
+  padding: 30px;
 }
 
-.rounded-t-lg{
+.rounded-t-lg {
   font-size: 15px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.329);
   border-radius: 15px;
-  box-shadow: #1db954;
-  width: 50%;
   height: 50%;
+  width: 280px;
   padding: 15px;
+  box-shadow: 0 0 20px #49494971;
 }
-
-
-
+.rounded-t-lg:hover {
+  transform: scale(1.1);
+  transition: 0.45s;
+  box-shadow: 0 0 20px #1db9549a;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  font-family: "Poppins";
+}
+.rounded-lg {
+  padding: 20px;
+}
+.carde h1 {
+  font-size: 25px;
+  display: flex;
+  font-weight: bold;
+  margin: 0 0 0 37%;
+  font-family: "Poppins";
+}
 </style>
